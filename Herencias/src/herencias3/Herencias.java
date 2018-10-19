@@ -19,10 +19,10 @@ public class Herencias {
         Estudiante e = new Estudiante("René", "Elizalde", 33, 100.2);
         System.out.println(e);
         
-        Docente d = new Docente("Luis", "Alvarez", 33, 1000); // falta implementar
+        Docente d = new Docente("Luis", "Alvarez", 33, 1000); // Implementacion con nueva clase
         System.out.println(d);
         
-        Policia p = new Policia("ALEX", "MENDOZA", 33, "Cabo"); // falta implementar
+        Policia p = new Policia("ALEX", "MENDOZA", 33, "Cabo"); // Implementacion con nueva clase
         System.out.println(p);
         
     }

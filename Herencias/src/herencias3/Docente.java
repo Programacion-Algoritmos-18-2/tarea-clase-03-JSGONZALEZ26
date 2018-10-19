@@ -10,12 +10,13 @@ package herencias3;
  * @author Jairo
  */
 public class Docente extends Persona{
+    //Atributo propio de la clase
     private double sueldo;
     public Docente(String n, String a, int e, double z) {
         super(n, a, e);        
         setSueldo(z);
     }
-
+//Getter y Setter
     public double getSueldo() {
         return sueldo;
     }

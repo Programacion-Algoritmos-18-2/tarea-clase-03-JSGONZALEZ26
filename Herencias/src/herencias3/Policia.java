@@ -10,12 +10,14 @@ package herencias3;
  * @author Jairo
  */
 public class Policia extends Persona{
+    //Atributo nuevo
     private String rango;
+    //Constructor
     public Policia(String n, String a, int e, String rango) {
         super(n, a, e);
         setRango(rango);
     }
-
+    //Getter y Setter
     public String getRango() {
         return rango;
     }

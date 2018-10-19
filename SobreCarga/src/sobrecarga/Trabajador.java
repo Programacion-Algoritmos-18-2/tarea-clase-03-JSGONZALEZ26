@@ -29,15 +29,16 @@ public class Trabajador {
     public void agregar_sueldo(double sueldo) {
         sueldo_mensual = sueldo;
     }
-
+//Sobrecarga de sueldo semanal
     public void agregar_sueldo(double x, double y, double z, double s) {
         sueldo_mensual = x + y + z + s;
     }
+//Sobrecarga con arreglo
 
     public void agregar_sueldo(double[] sueldos) {
         double sueldototal = 0;
         for (int i = 0; i < 4; i++) {
-            System.out.println("Ingrese el sueldo de la semana: " + (i+1));
+            System.out.println("Ingrese el sueldo de la semana: " + (i + 1));
             sueldos[i] = entrada.nextDouble();
             sueldototal = sueldototal + sueldos[i];
         }
@@ -59,6 +60,7 @@ public class Trabajador {
     public double obtener_sueldo_mensual() {
         return sueldo_mensual;
     }
+
     public String presentar_datos() {
         return String.format("\n\tNombres: %s \n\tApellidos: %s\n\t"
                 + "Sueldo: %.2f", obtener_nombres(), obtener_apellidos(),

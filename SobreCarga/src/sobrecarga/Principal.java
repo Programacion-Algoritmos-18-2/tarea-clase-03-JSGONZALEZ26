@@ -39,13 +39,16 @@ public class Principal {
         System.out.println("Ingrese el apellido del trabajador");
         String apellidos = scanner.nextLine();
         t.agregar_apellidos(apellidos);
+        //Ingreso de variable para nuevo sistema de sueldos 
         System.out.println("Ingrese su sueldo:\n1. Mensual\n2. Semanal\n3. Sueldo semanal con arreglo");
         int sueldos = scanner.nextInt();
+        //Creacion del condicional
         if (sueldos == 1) {
             System.out.println("Ingrese el sueldo mensual del trabajador");
             double sueldo = scanner.nextDouble();
             t.agregar_sueldo(sueldo);
         } else {
+            //Condicional segun sueldo semanal
             if (sueldos == 2) {
                 System.out.println("Ingrese el sueldo de la semana 1 del trabajador");
                 double sueldo1 = scanner.nextDouble();
@@ -57,6 +60,7 @@ public class Principal {
                 double sueldo4 = scanner.nextDouble();
                 t.agregar_sueldo(sueldo1, sueldo2, sueldo3, sueldo4);
             } else {
+                //condicional segun sueldo con arreglo
                 if (sueldos == 3) {
                     double[] suelds = new double[4];
                     t.agregar_sueldo(suelds);
