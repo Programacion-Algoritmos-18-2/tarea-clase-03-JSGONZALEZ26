@@ -59,7 +59,6 @@ public class Trabajador {
     public double obtener_sueldo_mensual() {
         return sueldo_mensual;
     }
-
     public String presentar_datos() {
         return String.format("\n\tNombres: %s \n\tApellidos: %s\n\t"
                 + "Sueldo: %.2f", obtener_nombres(), obtener_apellidos(),
