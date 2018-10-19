@@ -5,6 +5,8 @@
  */
 package sobrecarga;
 
+import java.util.Scanner;
+
 /**
  *
  * @author reroes
@@ -14,6 +16,7 @@ public class Trabajador {
     private String nombres;
     private double sueldo_mensual;
     private String apellidos;
+    Scanner entrada = new Scanner(System.in);
 
     public void agregar_nombres(String n) {
         nombres = n;
@@ -27,8 +30,18 @@ public class Trabajador {
         sueldo_mensual = sueldo;
     }
 
-    public void agregar_sueldo(double x, double y, double z, double s) {        
-        sueldo_mensual = x+y+z+s;
+    public void agregar_sueldo(double x, double y, double z, double s) {
+        sueldo_mensual = x + y + z + s;
+    }
+
+    public void agregar_sueldo(double[] sueldos) {
+        double sueldototal = 0;
+        for (int i = 0; i < 4; i++) {
+            System.out.println("Ingrese el sueldo de la semana: " + (i+1));
+            sueldos[i] = entrada.nextDouble();
+            sueldototal = sueldototal + sueldos[i];
+        }
+        sueldo_mensual = sueldototal;
     }
 
     public void agregar_apellidos(String n) {

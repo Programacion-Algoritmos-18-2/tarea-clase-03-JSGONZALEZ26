@@ -39,7 +39,7 @@ public class Principal {
         System.out.println("Ingrese el apellido del trabajador");
         String apellidos = scanner.nextLine();
         t.agregar_apellidos(apellidos);
-        System.out.println("Ingrese su sueldo:\n1. Mensual\n2. Semanal");
+        System.out.println("Ingrese su sueldo:\n1. Mensual\n2. Semanal\n3. Sueldo semanal con arreglo");
         int sueldos = scanner.nextInt();
         if (sueldos == 1) {
             System.out.println("Ingrese el sueldo mensual del trabajador");
@@ -56,6 +56,11 @@ public class Principal {
                 System.out.println("Ingrese el sueldo de la semana 4 del trabajador");
                 double sueldo4 = scanner.nextDouble();
                 t.agregar_sueldo(sueldo1, sueldo2, sueldo3, sueldo4);
+            } else {
+                if (sueldos == 3) {
+                    double[] suelds = new double[4];
+                    t.agregar_sueldo(suelds);
+                }
             }
         }
 
